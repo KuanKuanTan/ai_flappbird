@@ -1,0 +1,53 @@
+[game]
+width = 288
+height = 512
+fps = 30
+render_scale = 2
+pipe_gap = 120
+pipe_speed = 5
+pipe_distance = 150
+initial_pipe_offset = 220
+gravity = 1.0
+flap_velocity = -9.0
+max_fall_speed = 10.0
+bird_x_ratio = 0.2
+viewport_ratio = 0.79
+random_seed = 7
+deterministic_reset = true
+debug = false
+background_index = 0
+player_index = 2
+pipe_index = 0
+
+[preprocessing]
+frame_width = 84
+frame_height = 84
+frame_stack = 4
+
+[training]
+dataset_dir = "data/datasets"
+models_dir = "models"
+checkpoints_dir = "checkpoints"
+logs_dir = "logs"
+batch_size = 64
+learning_rate = 0.0005
+epochs = 20
+validation_split = 0.1
+num_workers = 0
+mixed_precision = true
+tensorboard = true
+checkpoint_interval = 1
+collect_episodes = 100
+max_episode_steps = 5000
+evaluation_episodes = 10
+trim_death_frames = 8
+min_segment_frames = 12
+
+[expert]
+center_tolerance = 12.0
+emergency_descent_velocity = 5.0
+top_safe_margin = 26.0
+bottom_safe_margin = 36.0
+
+[battle]
+countdown_seconds = 2
